@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "langchain-proof-of-concept"
+version = "0.1.0"
+description = ""
+authors = ["Morten Daehli Aslesen <mortendaehli@gmail.com>"]
+readme = "README.md"
+packages = [{include = "langchain_proof_of_concept"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+pydantic = "^2"
+pydantic-settings = "^2"
+langchain = "^0.0.339"
+langchain-experimental = "^0.0.42"
+langserve = {extras = ["all"], version = "^0.0.30"}
+langchain-cli = "^0.0.19"
+langsmith = "^0.0.66"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7"
+pre-commit = "^3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
